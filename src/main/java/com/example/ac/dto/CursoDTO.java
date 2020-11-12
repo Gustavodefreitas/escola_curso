@@ -1,22 +1,11 @@
-package com.example.ac.model;
+package com.example.ac.dto;
 
-public class curso {
-
-    private int codigodocurso;
+public class CursoDTO {   
+    
     private String nome;
     private int semestres;
     private int turma;
     private String turno;
-    private escola escola;
-    
-
-    public int getCodigodocurso() {
-        return codigodocurso;
-    }
-
-    public void setCodigodocurso(int codigodocurso) {
-        this.codigodocurso = codigodocurso;
-    }
 
     public String getNome() {
         return nome;
@@ -50,17 +39,4 @@ public class curso {
         this.turno = turno;
     }
 
-    public escola getEscola() {
-        return escola;
-    }
-
-    public void setEscola(escola escola) {
-        this.escola = escola;
-    }
-
-    
-
-
-    
-    
 }

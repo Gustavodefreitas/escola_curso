@@ -2,17 +2,36 @@ package com.example.ac.model;
 
 import java.util.ArrayList;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public class escola {
 
     private String escola;
     private String endereco;
+    private String telefone; 
+    private String diretor; 
     private int codigo;
-    private int quantcurso;
+   
+    @JsonIgnore
     private ArrayList<curso> cursos = new ArrayList<curso>();
 
     public escola(){
         
     }
+
+    public boolean addCurso(curso curso)
+    {
+        return cursos.add(curso);
+    }
+
+    public boolean removeCurso(curso curso)
+    {
+        return cursos.remove(curso);
+    }
+
+	public static curso getCursoByCodigo(int idCliente) {
+		return null;
+	}
 
     public String getEscola() {
         return escola;
@@ -30,20 +49,28 @@ public class escola {
         this.endereco = endereco;
     }
 
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    public String getDiretor() {
+        return diretor;
+    }
+
+    public void setDiretor(String diretor) {
+        this.diretor = diretor;
+    }
+
     public int getCodigo() {
         return codigo;
     }
 
     public void setCodigo(int codigo) {
         this.codigo = codigo;
-    }
-
-    public int getQuantcurso() {
-        return quantcurso;
-    }
-
-    public void setQuantcurso(int quantcurso) {
-        this.quantcurso = quantcurso;
     }
 
     public ArrayList<curso> getCursos() {
@@ -54,23 +81,13 @@ public class escola {
         this.cursos = cursos;
     }
 
-    public boolean addCurso(curso curso)
-    {
-        return this.cursos.add(curso);
-    }
-
-    public boolean removeCurso(curso curso)
-    {
-        return this.cursos.remove(curso);
-    }
-
     @Override
     public String toString() {
-        return "escola [codigo=" + codigo + ", cursos=" + cursos + ", endereco=" + endereco + ", escola=" + escola
-                + ", quantcurso=" + quantcurso + "]";
+        return "escola [codigo=" + codigo + ", cursos=" + cursos + ", diretor=" + diretor + ", endereco=" + endereco
+                + ", escola=" + escola + ", telefone=" + telefone + "]";
     }
-
     
+
 
 
 }

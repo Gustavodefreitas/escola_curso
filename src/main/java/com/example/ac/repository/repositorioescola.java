@@ -54,12 +54,12 @@ public class repositorioescola {
 
         if(aux != null){
             aux.setEndereco(escola.getEndereco());
-            aux.setQuantcurso(escola.getQuantcurso());
+            aux.setTelefone(escola.getTelefone());
         }
         return aux;
     }
 
-    public Optional<List<curso>> getAllbyCodigoEscola(int codigo)
+    public Optional<List<curso>> getAllCursobyCodigoEscola(int codigo)
     {
         escola aux =  getEscolaByCodigo(codigo).get();
         if(aux != null)

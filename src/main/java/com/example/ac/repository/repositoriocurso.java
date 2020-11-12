@@ -36,9 +36,9 @@ public class repositoriocurso {
         return cursos;
     }
 
-    public Optional<curso> getCursoByCodigo(int codigo){
+    public Optional<curso> getCursoByCodigo(long numero){
         for (curso curso : cursos) {
-            if (curso.getCodigodocurso() == codigo) {
+            if (curso.getCodigodocurso() == numero) {
                 return Optional.of(curso);
             }
         }    
